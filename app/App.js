@@ -10,10 +10,8 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <a className="navbar-brand">User Information</a>
-            </div>
+          <div className="navbar-header">
+            <a className="navbar-brand">User Information</a>
           </div>
         </nav>
         <div className="container">

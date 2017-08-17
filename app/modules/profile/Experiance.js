@@ -8,6 +8,7 @@ class Experiance extends Component{
   render(){
     return(
       <div>
+      <br/>
         <Form onSubmit={this.props.handleSubmit} ref="form">
           <fieldset disabled={this.props.disabled}>
             <Input type="text" name="companyName" title="Company Name" value=""/><br/>

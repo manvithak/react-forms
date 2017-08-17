@@ -15,7 +15,7 @@ class PersonalInformation extends Component{
             <Input type="text" name="fatherName" title="Fathers's Name" value=""/><br/>
             <Input type="text" name="motherName" title="Mother's Name" value=""/><br/>
           </fieldset>
-          <button className="btn btn-primary">{this.props.buttonName}</button>
+          <button className="btn btn-default">{this.props.buttonName}</button>
         </Form>
       </div>
     )

@@ -17,14 +17,16 @@ class Address extends Component{
             <Input type="text" name="presentCity" title="City" value=""/><br/>
             <Input type="text" name="presentState" title="State" value=""/><br/>
             <Input type="number" name="presentZip" title="Zip" value=""/><br/>
-          <h4>Permenent Address</h4>
-            <Input type="text" name="permenentStreet" title="Street" value=""/><br/>
-            <Input type="text" name="permenentArea" title="Area" value=""/><br/>
-            <Input type="text" name="permenentCity" title="City" value=""/><br/>
-            <Input type="text" name="permenentState" title="State" value=""/><br/>
-            <Input type="number" name="permenentZip" title="Zip" value=""/><br/>
+          <div className="form-adjust">
+            <h4>Permenent Address</h4>
+              <Input type="text" name="permenentStreet" title="Street" value=""/><br/>
+              <Input type="text" name="permenentArea" title="Area" value=""/><br/>
+              <Input type="text" name="permenentCity" title="City" value=""/><br/>
+              <Input type="text" name="permenentState" title="State" value=""/><br/>
+              <Input type="number" name="permenentZip" title="Zip" value=""/><br/>
+          </div>
           </fieldset>
-          <button className="btn btn-primary">{this.props.buttonName}</button>
+          <button className="btn btn-default">{this.props.buttonName}</button>
         </Form>
       </div>
     )

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-var MyHoc = function(ComposedComponent){
+var MyHoc = function(AbstractComponent){
   return class extends React.Component {
     constructor(props){
       super(props);
@@ -11,18 +11,15 @@ var MyHoc = function(ComposedComponent){
       }
       this.handleSubmit=this.handleSubmit.bind(this);
       this.newForm=this.newForm.bind(this);
-      this.resetForm = this.resetForm.bind(this);
     }
-    handleSubmit(data,element){
+    handleSubmit(data){
       this.setState({
         buttonName:'Save',
         disabled:false
       })
       if(!this.state.disabled){
         console.log(data);
-        element.reset();
       }
-
     }
     newForm(){
       this.setState({
@@ -30,7 +27,7 @@ var MyHoc = function(ComposedComponent){
       })
     }
     render() {
-      return <ComposedComponent {...this.state} {...this.props} handleSubmit={this.handleSubmit}
+      return <AbstractComponent {...this.state} handleSubmit={this.handleSubmit}
       newForm={this.newForm} />;
     }
   }
