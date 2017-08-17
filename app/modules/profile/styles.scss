@@ -1,0 +1,29 @@
+
+input[type=text],input[type=number] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width:400px;
+}
+.form-control {
+  display: block;
+  width: 400px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.navbar{
+	height:70px;
+}
+.navbar-default {
+   background-color: #000000;
+   border-color: #030033;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
