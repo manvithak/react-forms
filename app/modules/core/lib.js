@@ -12,14 +12,14 @@ var MyHoc = function(AbstractComponent){
       this.handleSubmit=this.handleSubmit.bind(this);
       this.newForm=this.newForm.bind(this);
     }
-    handleSubmit(data,resetFormCallback){
+    handleSubmit(data){
       this.setState({
         buttonName:'Save',
         disabled:false
       })
       if(!this.state.disabled){
         console.log(data);
-        resetFormCallback();
+        this.refs.child.refs.form.reset();
       }
     }
     newForm(){
@@ -29,7 +29,7 @@ var MyHoc = function(AbstractComponent){
     }
     render() {
       return <AbstractComponent {...this.state} handleSubmit={this.handleSubmit}
-      newForm={this.newForm} />;
+      newForm={this.newForm} ref="child" />;
     }
   }
 }

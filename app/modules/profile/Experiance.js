@@ -5,15 +5,12 @@ import Input from '../common/Input.js';
 import MyHoc from '../core/lib.js';
 
 class Experiance extends Component{
-  resetForm = () => {
-    this.refs.form.reset();
-  }
   render(){
     return(
       <div>
         <br/>
         <div className="form-place">
-          <Form onSubmit={(data) => {this.props.handleSubmit(data, this.resetForm)}} ref="form">
+          <Form onSubmit={this.props.handleSubmit} ref="form">
             <fieldset disabled={this.props.disabled}>
               <Input type="text" name="companyName" title="Company Name" value=""/><br/>
               <Input type="text" name="experiance" title="No.of Years Worked" value=""/><br/>

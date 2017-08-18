@@ -6,15 +6,12 @@ import Select from '../common/Select.js';
 import MyHoc from '../core/lib.js';
 import {isLessThan} from '../common/custom-validations.js';
 class EducationDetails extends Component{
-  resetForm = () => {
-    this.refs.form.reset();
-  }
   render(){
     return(
       <div >
         <br/>
         <div className="form-place">
-          <Form onSubmit={(data) => {this.props.handleSubmit(data, this.resetForm)}} ref="form">
+          <Form onSubmit={this.props.handleSubmit} ref="form">
             <fieldset disabled={this.props.disabled}>
               <Select name="examType" value=""
               options={[
