@@ -7,18 +7,19 @@ var MyHoc = function(AbstractComponent){
       this.state={
         buttonName:'Edit',
         disabled:true,
-        anotherForm:false
+        anotherForm:false,
       }
       this.handleSubmit=this.handleSubmit.bind(this);
       this.newForm=this.newForm.bind(this);
     }
-    handleSubmit(data){
+    handleSubmit(data,resetFormCallback){
       this.setState({
         buttonName:'Save',
         disabled:false
       })
       if(!this.state.disabled){
         console.log(data);
+        resetFormCallback();
       }
     }
     newForm(){

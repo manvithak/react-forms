@@ -1,4 +1,8 @@
-h3,h4{
+h3{
+  color:#ffffff;
+  margin-left:430px;
+}
+h4{
   color:#ffffff
 }
 input[type=text],input[type=number] {
@@ -29,21 +33,25 @@ span{
   margin-top:-300px;
   margin-right:200px;
 }
+.form-place{
+  margin-left: 350px;
+  margin-top:70px;
+}
 .navbar{
 	height:70px;
 }
 .navbar-default {
-  background: #337ab7;
+  background: #0099ff;
   border: none;
 }
 .navbar-default .navbar-brand {
-    color: #fff;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin:0 auto;
-    font-size: 30px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin:0 auto;
+  font-size: 30px;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border: none;

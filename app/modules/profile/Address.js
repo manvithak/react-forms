@@ -5,11 +5,14 @@ import Input from '../common/Input.js';
 import MyHoc from '../core/lib.js';
 
 class Address extends Component{
+  resetForm = () => {
+    this.refs.form.reset();
+  }
   render(){
     return(
       <div>
         <h3>Address</h3>
-        <Form onSubmit={this.props.handleSubmit} ref="form">
+        <Form onSubmit={(data) => {this.props.handleSubmit(data, this.resetForm)}} ref="form">
           <fieldset disabled={this.props.disabled}>
           <h4>Present Address</h4>
             <Input type="text" name="presentStreet" title="Street" value=""/><br/>
