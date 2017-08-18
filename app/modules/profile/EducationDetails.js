@@ -4,7 +4,7 @@ import {Form} from 'formsy-react';
 import Input from '../common/Input.js';
 import Select from '../common/Select.js';
 import MyHoc from '../core/lib.js';
-import {isLessThan} from '../common/custom-validations.js';
+import {isLessThan,isMoreThan} from '../common/custom-validations.js';
 class EducationDetails extends Component{
   render(){
     return(
@@ -22,7 +22,7 @@ class EducationDetails extends Component{
               /><br/>
               <Input type="text" name="examBoard" title="Exam Board" value=""/><br/>
               <Input type="number" name="percent" title="Percentage" value=""
-              validations="isNumeric,isLessThan:101" validationError="enter valid percent"/><br/>
+              validations="isMoreThan:-1,isLessThan:100" validationError="enter valid percent"/><br/>
             </fieldset>
             <button className="btn btn-default custom">{this.props.buttonName}</button>
           </Form>
