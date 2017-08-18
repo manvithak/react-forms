@@ -16,6 +16,9 @@ input[type=text],input[type=number] {
 span{
   color:#fff;
 }
+.custom{
+  width:83px;
+}
 .form-control {
   display: block;
   width: 400px;
@@ -35,13 +38,17 @@ span{
 }
 .form-place{
   margin-left: 350px;
-  margin-top:70px;
+  margin-top:60px;
+}
+.form-move{
+  margin-left: 350px;
+  margin-top: 30px;
 }
 .navbar{
   height:70px;
 }
 .navbar-default {
-  background: #0099ff;
+  background: #696969;
   border: none;
 }
 .navbar-default .navbar-brand {
@@ -51,7 +58,7 @@ span{
   left: 0;
   text-align: center;
   margin:0 auto;
-  font-size: 30px;
+  font-size: 35px;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border: none;

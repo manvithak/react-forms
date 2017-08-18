@@ -10,7 +10,7 @@ class EducationDetails extends Component{
     return(
       <div >
         <br/>
-        <div className="form-place">
+        <div className="form-move">
           <Form onSubmit={this.props.handleSubmit} ref="form">
             <fieldset disabled={this.props.disabled}>
               <Select name="examType" value=""
@@ -24,7 +24,7 @@ class EducationDetails extends Component{
               <Input type="number" name="percent" title="Percentage" value=""
               validations="isNumeric,isLessThan:101" validationError="enter valid percent"/><br/>
             </fieldset>
-            <button className="btn btn-default">{this.props.buttonName}</button>
+            <button className="btn btn-default custom">{this.props.buttonName}</button>
           </Form>
           <br/>
           <button className="btn btn-default" onClick={this.props.newForm}>Add Form</button>

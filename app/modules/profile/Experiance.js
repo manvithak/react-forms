@@ -9,13 +9,13 @@ class Experiance extends Component{
     return(
       <div>
         <br/>
-        <div className="form-place">
+        <div className="form-move">
           <Form onSubmit={this.props.handleSubmit} ref="form">
             <fieldset disabled={this.props.disabled}>
               <Input type="text" name="companyName" title="Company Name" value=""/><br/>
               <Input type="text" name="experiance" title="No.of Years Worked" value=""/><br/>
             </fieldset>
-            <button className="btn btn-default">{this.props.buttonName}</button>
+            <button className="btn btn-default custom">{this.props.buttonName}</button>
           </Form>
           <br/>
           <button className="btn btn-default" onClick={this.props.newForm}>Add Form</button><br/>
