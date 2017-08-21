@@ -10,11 +10,14 @@ class Select extends React.Component{
       </option>
     ));
     return (
-      <select name={this.props.name} className="form-control"
-      onChange={(e) => this.props.setValue(e.target.value)}
-      value={this.props.getValue()}>
-        {options}
-      </select>
+      <label>
+        {this.props.title}
+        <select name={this.props.name} className="form-control"
+        onChange={(e) => this.props.setValue(e.target.value)}
+        value={this.props.getValue()}>
+          {options}
+        </select>
+      </label>  
     );
   }
 }

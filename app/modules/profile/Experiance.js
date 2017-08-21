@@ -1,29 +1,23 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import {Form} from 'formsy-react';
+import FormWrapper from '../common/FormWrapper.js';
 import Input from '../common/Input.js';
-import MyHoc from '../core/lib.js';
+import Hoc from '../common/Hoc.js';
+import HocAddForm from '../common/HocAddForm.js';
 
 class Experiance extends Component{
   render(){
     return(
-      <div>
-        <br/>
-        <div className="form-move">
-          <Form onSubmit={this.props.handleSubmit} ref="form">
-            <fieldset disabled={this.props.disabled}>
-              <Input type="text" name="companyName" title="Company Name" value=""/><br/>
-              <Input type="text" name="experiance" title="No.of Years Worked" value=""/><br/>
-            </fieldset>
-            <button className="btn btn-default custom">{this.props.buttonName}</button>
-          </Form>
-          <br/>
-          <button className="btn btn-default" onClick={this.props.newForm}>Add Form</button><br/>
-        </div>
-        {this.props.anotherForm?<PersonExperiance />:null}
+      <div className="form-place">
+        <h3>Experiance</h3>
+        <FormWrapper onSubmit={this.props.handleSubmit}disabled={this.props.disabled}
+        buttonName={this.props.buttonName}>
+          <Input type="text" name="companyName" title="Company Name" value=""/>
+          <Input type="number" name="experiance" title="No.of Years Worked" value=""/>
+        </FormWrapper>
       </div>
     )
   }
 }
-const PersonExperiance=MyHoc(Experiance);
+const PersonExperiance=HocAddForm(Hoc(Experiance));
 export default PersonExperiance;

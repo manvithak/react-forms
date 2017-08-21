@@ -1,16 +1,14 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-var MyHoc = function(AbstractComponent){
+var Hoc = function(AbstractComponent){
   return class extends React.Component {
     constructor(props){
       super(props);
       this.state={
         buttonName:'Edit',
-        disabled:true,
-        anotherForm:false,
+        disabled:true
       }
       this.handleSubmit=this.handleSubmit.bind(this);
-      this.newForm=this.newForm.bind(this);
     }
     handleSubmit(data){
       this.setState({
@@ -19,18 +17,15 @@ var MyHoc = function(AbstractComponent){
       })
       if(!this.state.disabled){
         console.log(data);
-        this.refs.child.refs.form.reset();
+        this.setState({
+          buttonName:'Edit',
+          disabled:true
+        })
       }
     }
-    newForm(){
-      this.setState({
-        anotherForm:true
-      })
-    }
     render() {
-      return <AbstractComponent {...this.state} handleSubmit={this.handleSubmit}
-      newForm={this.newForm} ref="child" />;
+      return <AbstractComponent {...this.state} handleSubmit={this.handleSubmit}/>;
     }
   }
 }
-export default MyHoc;
+export default Hoc;

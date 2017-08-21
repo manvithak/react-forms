@@ -1,38 +1,32 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import {Form} from 'formsy-react';
+import FormWrapper from '../common/FormWrapper.js';
 import Input from '../common/Input.js';
 import Select from '../common/Select.js';
-import MyHoc from '../core/lib.js';
+import Hoc from '../common/Hoc.js';
+import HocAddForm from '../common/HocAddForm.js';
 import {isLessThan,isMoreThan} from '../common/custom-validations.js';
 class EducationDetails extends Component{
   render(){
     return(
-      <div >
-        <br/>
-        <div className="form-move">
-          <Form onSubmit={this.props.handleSubmit} ref="form">
-            <fieldset disabled={this.props.disabled}>
-              <Select name="examType" value=""
-              options={[
-                  {title: 'Tenth', value: 'tenth'},
-                  {title: 'Twelve', value: 'twelve'},
-                  {title: 'Graduation', value: 'graduation'},
-                ]}
-              /><br/>
-              <Input type="text" name="examBoard" title="Exam Board" value=""/><br/>
-              <Input type="number" name="percent" title="Percentage" value=""
-              validations="isMoreThan:-1,isLessThan:100" validationError="enter valid percent"/><br/>
-            </fieldset>
-            <button className="btn btn-default custom">{this.props.buttonName}</button>
-          </Form>
-          <br/>
-          <button className="btn btn-default" onClick={this.props.newForm}>Add Form</button>
-        </div>
-        {this.props.anotherForm?<Education />:null}
+      <div className="form-place">
+        <h3>Educational Details</h3>
+        <FormWrapper onSubmit={this.props.handleSubmit} disabled={this.props.disabled}
+        buttonName={this.props.buttonName}>
+          <Select name="examType" value="" title="ExamType"
+          options={[
+              {title: 'Tenth', value: 'tenth'},
+              {title: 'Twelve', value: 'twelve'},
+              {title: 'Graduation', value: 'graduation'},
+            ]}
+          />
+          <Input type="text" name="examBoard" title="Exam Board" value=""/>
+          <Input type="number" name="percent" title="Percentage" value=""
+          validations="isMoreThan:0,isLessThan:100" validationError="enter valid percent"/>
+        </FormWrapper>
       </div>
     )
   }
 }
-const Education = MyHoc(EducationDetails);
+const Education = HocAddForm(Hoc(EducationDetails));
 export default Education;

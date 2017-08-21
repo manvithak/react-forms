@@ -7,18 +7,22 @@ class Input extends React.Component{
     const errorMessage = this.props.getErrorMessage();
     return (
       <div >
-        <input
-          className="form-control"
-          type={this.props.type || 'text'}
-          name={this.props.name}
-          placeholder={this.props.title}
-          onChange={(e) => this.props.setValue(e.target.value)}
-          value={this.props.getValue()}
-        />
+        <label>
+        {this.props.title}
+          <input
+            type={this.props.type}
+            name={this.props.name}
+            onChange={(e) => this.props.setValue(e.target.value)}
+            value={this.props.getValue()}
+          />
+        </label>
         <span>{errorMessage}</span>
       </div>
     );
   }
 }
+Input.defaultProps = {
+  type: 'text'
+};
 
 export default HOC(Input);
