@@ -37,19 +37,19 @@ h1{
   margin-top: 5px;
   margin-left:250px;
   border-radius:10px;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 }
 h3,h4{
   color:#ffffff;
