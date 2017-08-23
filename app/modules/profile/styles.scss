@@ -1,6 +1,6 @@
 .page-margin{
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 250px;
+  margin-right: 250px;
   margin-top: 40px;
 }
 fieldset{
@@ -26,17 +26,18 @@ h1{
   color:#ffffff;
   float: left;
   height: 60px;
+  font-style: italic;
 }
 .colCenter {
   height: 60px;
-  margin-left:250px;
 }
 .topnav {
   background-color: #008B8B;
   overflow: hidden;
   margin-top: 5px;
-  margin-left:250px;
+  margin-left:200px;
   border-radius:10px;
+  width:580px;
   a{
     float: left;
     display: block;
@@ -46,11 +47,12 @@ h1{
     text-decoration: none;
     font-size: 17px;
   }
-  a:hover {
+  a:active,a:hover,a:focus{
     background-color: #ddd;
     color: black;
   }
 }
+
 h3,h4{
   color:#ffffff;
   align:center;
@@ -75,26 +77,35 @@ button{
   width:70px;
   height:30px;
   border-radius:5px;
-  background-color: #ffffff;
-  color:#000;
-}
-.add-button{
-  margin-top:30px;
-  margin-left:350px;
+  border:1px solid #000;
+  background-color: #000000;
+  color:#fff;
 }
 span{
   color:#fff;
 }
 .form-place{
-  margin-left:300px;
-  margin-right:300px;
+  margin-left:250px;
+  margin-right:270px;
 }
 .form-parent{
-  height:350px;
+  height:400px;
+  margin-right:50px;
+  .form-left{
+    float:left;
+  }
+  .form-right{
+    float:right;
+  }
 }
-.form-left{
-  float:left;
+#add-button{
+  margin-top:30px;
+  margin-left:310px;
 }
-.form-right{
-  float:right;
+#align-middle{
+   text-align: center;
+}
+#button-right{
+  float: right;
+  margin-right:15px;
 }

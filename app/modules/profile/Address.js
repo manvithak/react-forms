@@ -2,16 +2,16 @@ import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import FormWrapper from '../common/FormWrapper.js';
 import Input from '../common/Input.js';
-import Hoc from '../common/Hoc.js';
+import HocAddForm from '../common/HocAddForm.js';
 
 class Address extends Component{
   render(){
     return(
       <div>
-        <h3>Address</h3>
+        <div className="form-parent">
+        <h3 id="align-middle">Address</h3>
         <FormWrapper onSubmit={this.props.handleSubmit} disabled={this.props.disabled}
         buttonName={this.props.buttonName}>
-          <div className="form-parent">
             <div className="form-left">
               <h4>Present Address</h4>
               <Input type="text" name="presentStreet" title="Street" value=""/>
@@ -28,10 +28,10 @@ class Address extends Component{
               <Input type="text" name="permenentState" title="State" value=""/>
               <Input type="number" name="permenentZip" title="Zip" value=""/>
             </div>
-          </div>
           </FormWrapper>
+          </div>
       </div>
     )
   }
 }
-export default Hoc(Address);
+export default HocAddForm(Address);

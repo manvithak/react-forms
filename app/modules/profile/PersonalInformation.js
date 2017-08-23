@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import FormWrapper from '../common/FormWrapper.js';
 import Input from '../common/Input.js';
-import Hoc from '../common/Hoc.js';
+import HocAddForm from '../common/HocAddForm.js';
 class PersonalInformation extends Component{
   render(){
     return(
@@ -20,4 +20,4 @@ class PersonalInformation extends Component{
    )
    }
 }
-export default Hoc(PersonalInformation);
+export default HocAddForm(PersonalInformation);

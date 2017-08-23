@@ -12,12 +12,11 @@ class Select extends React.Component{
     return (
       <label>
         {this.props.title}
-        <select name={this.props.name} className="form-control"
-        onChange={(e) => this.props.setValue(e.target.value)}
+        <select name={this.props.name} onChange={(e) => this.props.setValue(e.target.value)}
         value={this.props.getValue()}>
           {options}
         </select>
-      </label>  
+      </label>
     );
   }
 }
