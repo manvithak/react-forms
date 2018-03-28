@@ -1,9 +1,10 @@
-Formsy.addValidationRule('isMoreThan', function (values, value, otherField) {
-  return Number(value) > Number(otherField);
-})
-Formsy.addValidationRule('isLessThan', function(values,value,otherField){
-  return Number(value) < Number(otherField);
+Formsy.addValidationRule('isValidPercent', function (values, value) {
+  if(value>100)
+    return false;
+  else if(value<0)
+    return false;
+  else
+    return true;
 })
 
-export class isMoreThan{}
-export class isLessThan{}
+export class isValidPercent{}
